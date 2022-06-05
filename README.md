@@ -11,7 +11,7 @@ https://colab.research.google.com/drive/1457QmwqTnaYD9ganvVHoKJ0nl7NidpLs
   - Load the modified dataset that we host to Google Drive, here is the link: <br> https://drive.google.com/drive/folders/1hMuDgvtpzym6CqARviPEekGIXePALmsz?usp=sharing
 
 - ## 2. Pre-processing Datasets
-  - Adding Augmentation to make more images:
+  - Adding Augmentation to produce more images:
     - rotation_range=40
     - width_shift_range=0.2,
     - height_shift_range=0.2,
@@ -24,8 +24,8 @@ https://colab.research.google.com/drive/1457QmwqTnaYD9ganvVHoKJ0nl7NidpLs
 - ## 3. Training
 
    - Using Transfer Learning with `Inception` to get better accuracy.
-   - Using `CategoricalCrossentropy` as loss parameter
-   - Using `Adamax(learning_rate=0.001)` as optimizer parameter
+   - Using `CategoricalCrossentropy` as a loss parameter
+   - Using `Adamax(learning_rate=0.001)` as an optimizer parameter
    - Added more layer too to `model.Sequential`:  
      -  Added `Flatten` layer
      -  Added `Dense(units=1024, activation='relu')` layer 

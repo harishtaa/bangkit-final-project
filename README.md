@@ -23,17 +23,17 @@ https://colab.research.google.com/drive/1457QmwqTnaYD9ganvVHoKJ0nl7NidpLs
 
 - ## 3. Training
 
-   - Using transfer learning Inception to make model accuracy better.
-   - Using `CategoricalCrossentropy` as loss
-   - Using `Adamax(learning_rate=0.001)` as optimizer 
-   - Added more layer too to `model.Sequential` to make model accuracy more better:  
+   - Using Transfer Learning with `Inception` to get better accuracy.
+   - Using `CategoricalCrossentropy` as loss parameter
+   - Using `Adamax(learning_rate=0.001)` as optimizer parameter
+   - Added more layer too to `model.Sequential`:  
      -  Added `Flatten` layer
      -  Added `Dense(units=1024, activation='relu')` layer 
      -  Added `Dropout(units=0.5)` layer
      -  Added output layer `Dense(units=10, activation='softmax')`
   - Training with 50 epochs
   - Set the `Callbacks` to stop training when accuracy reached 94%
-  - From the result, got:
+  - From the result, it got:
     - `loss: 17.11%`
     - `accuracy: 94.25%`
     - `val_loss: 16.91%`

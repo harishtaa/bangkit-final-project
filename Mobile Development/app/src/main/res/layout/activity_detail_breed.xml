@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/sapphire"
+    android:padding="15dp"
+    tools:context=".DetailBreedActivity">
+
+    <TextView
+        android:id="@+id/tv_dog_name_detail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/dandelion"
+        android:textStyle="bold"
+        android:textSize="24sp"
+        android:text="@string/dog_name"/>
+
+    <ImageView
+        android:id="@+id/iv_iv_dog_pic_detail"
+        android:layout_width="120dp"
+        android:layout_height="160dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_dog_name_detail"
+        android:background="@color/dandelion"
+        android:layout_marginTop="15dp"/>
+
+    <View
+        android:id="@+id/view_background_detail"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/iv_iv_dog_pic_detail"
+        app:layout_constraintTop_toTopOf="@id/iv_iv_dog_pic_detail"
+        app:layout_constraintBottom_toBottomOf="@id/iv_iv_dog_pic_detail"
+        android:background="@drawable/rectangle_detail"
+        android:layout_marginStart="10dp"/>
+
+    <TextView
+        style="@style/style_detail_activity"
+        android:id="@+id/tv_al"
+        android:text="@string/activity_lv"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="@id/view_background_detail"
+        app:layout_constraintTop_toTopOf="@id/view_background_detail"/>
+
+    <TextView
+        style="@style/style_detail_activity"
+        android:id="@+id/tv_bl"
+        android:text="@string/barking_lv"
+        app:layout_constraintStart_toStartOf="@id/view_background_detail"
+        app:layout_constraintTop_toBottomOf="@id/tv_al"
+        app:layout_constraintBottom_toTopOf="@id/tv_tn"/>
+
+    <TextView
+        style="@style/style_detail_activity"
+        android:id="@+id/tv_tn"
+        android:text="@string/trainability"
+        app:layout_constraintStart_toStartOf="@id/view_background_detail"
+        app:layout_constraintTop_toBottomOf="@id/tv_bl"
+        app:layout_constraintBottom_toTopOf="@id/tv_pn"/>
+
+    <TextView
+        style="@style/style_detail_activity"
+        android:id="@+id/tv_pn"
+        android:text="@string/protective_nature"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintStart_toStartOf="@id/view_background_detail"
+        app:layout_constraintBottom_toBottomOf="@id/view_background_detail" />
+
+    <TextView
+        style="@style/style_result_detail_activity"
+        android:id="@+id/tv_result_al"
+        android:text="@string/standard"
+        app:layout_constraintEnd_toEndOf="@id/view_background_detail"
+        app:layout_constraintTop_toTopOf="@id/tv_al" />
+
+    <TextView
+        style="@style/style_result_detail_activity"
+        android:id="@+id/tv_result_bl"
+        android:text="@string/standard"
+        app:layout_constraintEnd_toEndOf="@id/view_background_detail"
+        app:layout_constraintTop_toTopOf="@id/tv_bl" />
+
+    <TextView
+        style="@style/style_result_detail_activity"
+        android:id="@+id/tv_result_tn"
+        android:text="@string/standard"
+        app:layout_constraintEnd_toEndOf="@id/view_background_detail"
+        app:layout_constraintTop_toTopOf="@id/tv_tn" />
+
+    <TextView
+        style="@style/style_result_detail_activity"
+        android:id="@+id/tv_result_pn"
+        android:text="@string/standard"
+        app:layout_constraintEnd_toEndOf="@id/view_background_detail"
+       app:layout_constraintTop_toTopOf="@id/tv_pn"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/sapphire"
+    tools:context=".CameraActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraint_lay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center">
+        <ImageView
+            android:id="@+id/iv_upload_foto"
+            android:layout_width="360dp"
+            android:layout_height="480dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:src="@drawable/dogdogdog"
+            />
+
+        <Button
+            android:id="@+id/btn_camera"
+            android:text="@string/camera"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/btn_galeri"
+            app:layout_constraintTop_toBottomOf="@id/iv_upload_foto"
+            style="@style/style_btn_camera_activity"/>
+
+        <Button
+            android:id="@+id/btn_galeri"
+            android:text="@string/gallery"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/btn_camera"
+            app:layout_constraintTop_toBottomOf="@id/iv_upload_foto"
+            style="@style/style_btn_camera_activity"/>
+
+        <Button
+            android:id="@+id/btn_scan"
+            android:text="@string/scan"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btn_galeri"
+            style="@style/style_btn_camera_activity"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>

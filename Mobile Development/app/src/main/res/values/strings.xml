@@ -1,0 +1,112 @@
+<resources>
+    <string name="app_name">DBDPV1</string>
+    <string name="logo_aplikasi">Logo Aplikasi</string>
+    <string name="menu_1">BREED</string>
+    <string name="menu_2">CAMERA</string>
+    <string name="menu_3">BOOKMARK</string>
+    <string name="dog_breed">dog breed</string>
+    <string name="camera">camera</string>
+    <string name="bookmark">bookmark</string>
+    <string name="exit">exit</string>
+    <string name="gallery">gallery</string>
+    <string name="scan">scan</string>
+    <string name="nama_breed">Nama Breed</string>
+    <string name="dog_name">Dog Name</string>
+    <string name="activity_lv">Activity Lv.</string>
+    <string name="barking_lv">Barking Lv.</string>
+    <string name="trainability">Trainability</string>
+    <string name="protective_nature">Protective Nature</string>
+    <string name="standard">Standard</string>
+
+    <string-array name="dogbreed">
+        <item>Beagle</item>
+        <item>Bullmastiff</item>
+        <item>Chihuahua</item>
+        <item>German Shepherd</item>
+        <item>Golden Retriever</item>
+        <item>Maltese</item>
+        <item>Pomeranian</item>
+        <item>Pug</item>
+        <item>Shihtzu</item>
+        <item>Siberian Husky</item>
+    </string-array>
+
+    <string-array name="dogphotos">
+        <item>@drawable/beagle</item>
+        <item>@drawable/bullmastiff</item>
+        <item>@drawable/chihuahua</item>
+        <item>@drawable/germanshepherd</item>
+        <item>@drawable/goldenretriever</item>
+        <item>@drawable/maltese</item>
+        <item>@drawable/pomeranian</item>
+        <item>@drawable/pug</item>
+        <item>@drawable/shihtzu</item>
+        <item>@drawable/siberianhusky</item>
+    </string-array>
+
+    <string-array name="activity">
+        <item>Active</item>
+        <item>Active</item>
+        <item>Active</item>
+        <item>Active</item>
+        <item>Active</item>
+        <item>Active</item>
+        <item>Active</item>
+        <item>Active</item>
+        <item>Active</item>
+        <item>Active</item>
+    </string-array>
+
+    <string-array name="barking">
+        <item>Noisy</item>
+        <item>Noisy</item>
+        <item>Noisy</item>
+        <item>Noisy</item>
+        <item>Noisy</item>
+        <item>Noisy</item>
+        <item>Noisy</item>
+        <item>Noisy</item>
+        <item>Noisy</item>
+        <item>Noisy</item>
+    </string-array>
+
+    <string-array name="trainability">
+        <item>Strandard</item>
+        <item>Strandard</item>
+        <item>Strandard</item>
+        <item>Strandard</item>
+        <item>Strandard</item>
+        <item>Strandard</item>
+        <item>Strandard</item>
+        <item>Strandard</item>
+        <item>Strandard</item>
+        <item>Strandard</item>
+    </string-array>
+
+    <string-array name="protectivenature">
+        <item>Good</item>
+        <item>Good</item>
+        <item>Good</item>
+        <item>Good</item>
+        <item>Good</item>
+        <item>Good</item>
+        <item>Good</item>
+        <item>Good</item>
+        <item>Good</item>
+        <item>Good</item>
+    </string-array>
+
+    <string-array name="chp">
+        <item>Good</item>
+        <item>Good</item>
+        <item>Good</item>
+        <item>Good</item>
+        <item>Good</item>
+        <item>Good</item>
+        <item>Good</item>
+        <item>Good</item>
+        <item>Good</item>
+        <item>Good</item>
+    </string-array>
+
+</resources>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/sapphire"
+    android:padding="2dp">
+
+    <ImageView
+        android:id="@+id/iv_foto_breed"
+        android:layout_width="match_parent"
+        android:layout_height="260dp"
+        android:scaleType="centerCrop"
+        android:background="@color/dandelion"/>
+
+    <TextView
+        android:id="@+id/tv_nama_breed"
+        android:text="@string/nama_breed"
+        app:layout_constraintBottom_toBottomOf="@id/iv_foto_breed"
+        app:layout_constraintStart_toStartOf="@id/iv_foto_breed"
+        style="@style/style_text_view_breed"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

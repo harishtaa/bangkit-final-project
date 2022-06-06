@@ -2,7 +2,7 @@
 
 This is a project to fulfill the Bangkit Academy led by Google, Goto, and Traveloka Program. This app facilitates and identifies owners in detail about dog breeds, ranging from characteristics, types of food, diseases that usually attack certain types/breeds of animals and many others.
 
-## Machine Learning Development Documentation
+## Machine Learning Documentation
 
 Link to Colab: <br>
 https://colab.research.google.com/drive/1457QmwqTnaYD9ganvVHoKJ0nl7NidpLs

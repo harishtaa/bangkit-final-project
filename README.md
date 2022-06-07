@@ -34,9 +34,9 @@ https://colab.research.google.com/drive/1457QmwqTnaYD9ganvVHoKJ0nl7NidpLs
   - Training with 50 epochs
   - Set the `Callbacks` to stop training when accuracy reached 94%
   - From the result, it got:
-    - `loss: 17.11%`
-    - `accuracy: 94.25%`
-    - `val_loss: 16.91%`
+    - `loss: 10.62%`
+    - `accuracy: 96.75%`
+    - `val_loss: 18.53%`
     - `val_accuracy: 94.33%`
 - ## 4. Save the Model to Google Drive
   - Then, save the model (*.h5 format) to Google Drive (saved only the best model to Google Drive):<br>

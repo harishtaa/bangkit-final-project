@@ -6,7 +6,21 @@
     android:layout_height="match_parent"
     android:background="@color/sapphire"
     android:padding="15dp"
-    tools:context=".DetailBreedActivity">
+    tools:context=".menu1.DetailBreedActivity">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/iv_iv_dog_pic_detail"
+        android:layout_width="120dp"
+        android:layout_height="160dp"
+        app:cardCornerRadius="12dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_dog_name_detail"
+        android:layout_marginTop="15dp">
+        <ImageView
+            android:id="@+id/iv_dog_pic"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </androidx.cardview.widget.CardView>
 
     <TextView
         android:id="@+id/tv_dog_name_detail"
@@ -15,31 +29,23 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="10dp"
         android:textColor="@color/dandelion"
         android:textStyle="bold"
         android:textSize="24sp"
         android:text="@string/dog_name"/>
 
-    <ImageView
-        android:id="@+id/iv_iv_dog_pic_detail"
-        android:layout_width="120dp"
-        android:layout_height="160dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tv_dog_name_detail"
-        android:background="@color/dandelion"
-        android:layout_marginTop="15dp"/>
-
-    <View
+    <androidx.cardview.widget.CardView
         android:id="@+id/view_background_detail"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:layout_marginStart="10dp"
+        android:backgroundTint="@color/dandelion"
+        app:cardCornerRadius="12dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/iv_iv_dog_pic_detail"
         app:layout_constraintTop_toTopOf="@id/iv_iv_dog_pic_detail"
         app:layout_constraintBottom_toBottomOf="@id/iv_iv_dog_pic_detail"
-        android:background="@drawable/rectangle_detail"
-        android:layout_marginStart="10dp"/>
+        />
 
     <TextView
         style="@style/style_detail_activity"
@@ -100,6 +106,67 @@
         android:text="@string/standard"
         app:layout_constraintEnd_toEndOf="@id/view_background_detail"
        app:layout_constraintTop_toTopOf="@id/tv_pn"/>
+
+    <TextView
+        android:id="@+id/tv_chp_judul"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/togbut_favorite"
+        app:layout_constraintTop_toTopOf="@id/togbut_favorite"
+        app:layout_constraintBottom_toBottomOf="@id/togbut_favorite"
+        android:textColor="@color/dandelion"
+        android:textStyle="bold"
+        android:textSize="24sp"
+        android:text="Common Health Problems" />
+    
+    <ToggleButton
+        android:id="@+id/togbut_favorite"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:textOn=""
+        android:textOff=""
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toEndOf="@id/view_background_detail"
+        app:layout_constraintTop_toBottomOf="@id/view_background_detail"
+        android:background="@drawable/bookmark_selection"/>
+
+    <ImageView
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:src="@drawable/ic_bookmark"
+        android:translationZ="100dp"
+        app:layout_constraintStart_toStartOf="@id/togbut_favorite"
+        app:layout_constraintEnd_toEndOf="@id/togbut_favorite"
+        app:layout_constraintTop_toTopOf="@id/togbut_favorite"
+        app:layout_constraintBottom_toBottomOf="@id/togbut_favorite"
+        />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/view_background_chp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="10dp"
+        android:backgroundTint="@color/dandelion"
+        app:cardCornerRadius="12dp"
+        app:layout_constraintEnd_toEndOf="@id/view_background_detail"
+        app:layout_constraintStart_toStartOf="@id/iv_iv_dog_pic_detail"
+        app:layout_constraintBottom_toBottomOf="@id/tv_isi_chp"
+        app:layout_constraintTop_toBottomOf="@id/togbut_favorite"/>
+
+    <TextView
+        android:id="@+id/tv_isi_chp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:translationZ="100dp"
+        app:layout_constraintStart_toStartOf="@id/view_background_chp"
+        app:layout_constraintEnd_toEndOf="@id/view_background_chp"
+        app:layout_constraintTop_toTopOf="@id/view_background_chp"
+        app:layout_constraintBottom_toBottomOf="@id/view_background_chp"/>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

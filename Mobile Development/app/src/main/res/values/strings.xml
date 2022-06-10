@@ -4,7 +4,7 @@
     <string name="menu_1">BREED</string>
     <string name="menu_2">CAMERA</string>
     <string name="menu_3">BOOKMARK</string>
-    <string name="dog_breed">dog breed</string>
+    <string name="dog_breed">Dog Breed</string>
     <string name="camera">camera</string>
     <string name="bookmark">bookmark</string>
     <string name="exit">exit</string>
@@ -17,17 +17,35 @@
     <string name="trainability">Trainability</string>
     <string name="protective_nature">Protective Nature</string>
     <string name="standard">Standard</string>
+    <string name="bookmark_1">Bookmark</string>
+    <string name="please">Please take a picture of your dog</string>
+    <string name="desc_banner">banner logo utama</string>
+    <string name="yd">Your Dog</string>
+    <string name="breed">Breed</string>
+
+    <string-array name="dogID">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+    </string-array>
 
     <string-array name="dogbreed">
         <item>Beagle</item>
-        <item>Bullmastiff</item>
+        <item>Bull mastiff</item>
         <item>Chihuahua</item>
         <item>German Shepherd</item>
         <item>Golden Retriever</item>
         <item>Maltese</item>
         <item>Pomeranian</item>
         <item>Pug</item>
-        <item>Shihtzu</item>
+        <item>Shih Tzu</item>
         <item>Siberian Husky</item>
     </string-array>
 
@@ -49,64 +67,64 @@
         <item>Active</item>
         <item>Active</item>
         <item>Active</item>
-        <item>Active</item>
-        <item>Active</item>
-        <item>Active</item>
-        <item>Active</item>
-        <item>Active</item>
+        <item>Standard</item>
+        <item>Standard</item>
+        <item>Standard</item>
+        <item>Standard</item>
+        <item>Standard</item>
         <item>Active</item>
     </string-array>
 
     <string-array name="barking">
         <item>Noisy</item>
+        <item>Not noisy</item>
         <item>Noisy</item>
+        <item>Standard</item>
+        <item>Not noisy</item>
+        <item>Standard</item>
         <item>Noisy</item>
-        <item>Noisy</item>
-        <item>Noisy</item>
-        <item>Noisy</item>
-        <item>Noisy</item>
-        <item>Noisy</item>
-        <item>Noisy</item>
+        <item>Not noisy</item>
+        <item>Standard</item>
         <item>Noisy</item>
     </string-array>
 
     <string-array name="trainability">
-        <item>Strandard</item>
-        <item>Strandard</item>
-        <item>Strandard</item>
-        <item>Strandard</item>
-        <item>Strandard</item>
-        <item>Strandard</item>
-        <item>Strandard</item>
-        <item>Strandard</item>
-        <item>Strandard</item>
-        <item>Strandard</item>
+        <item>Standard</item>
+        <item>Easy to train</item>
+        <item>Standard</item>
+        <item>Easy to train</item>
+        <item>Easy to train</item>
+        <item>Standard</item>
+        <item>Standard</item>
+        <item>Easy to train</item>
+        <item>Easy to train</item>
+        <item>Standard</item>
     </string-array>
 
     <string-array name="protectivenature">
+        <item>Not good</item>
         <item>Good</item>
         <item>Good</item>
         <item>Good</item>
+        <item>Standard</item>
         <item>Good</item>
         <item>Good</item>
-        <item>Good</item>
-        <item>Good</item>
-        <item>Good</item>
-        <item>Good</item>
+        <item>Standard</item>
+        <item>Standard</item>
         <item>Good</item>
     </string-array>
 
     <string-array name="chp">
-        <item>Good</item>
-        <item>Good</item>
-        <item>Good</item>
-        <item>Good</item>
-        <item>Good</item>
-        <item>Good</item>
-        <item>Good</item>
-        <item>Good</item>
-        <item>Good</item>
-        <item>Good</item>
+        <item>Ras anjing Beagle memiliki resiko terhadap displasia pinggul, hipotiroidisme, epilepsi, luxating patella (tempurung lutut yang terkilir), dan gangguan mata. Kami merekomendasikan untuk melakukan pengecekan telinga dan pembersihan gigi secara teratur.</item>
+        <item>Ras anjing Bull Mastiff memiliki resiko kanker serta kembung, pembengkakan perut yang tiba-tiba. Kami merekomendasikan untuk mempelajari bagaimana penanganan apabila anjing ini mengalami pembengkakan perut.</item>
+        <item>Ras anjing Chihuahua memiliki resiko yang lebih tinggi terhadap penyakit jantung (patent ductus arteriosus, mitral valve disease), penyakit mata, tempurung lutut longgar (patellar luxation), idiophatic epilepsy. Kami merekomendasikan pengecekan kesehatan patella, cardio, dan ophtalmologi (mata).</item>
+        <item>Ras anjing German Shepherd memiliki resiko myelopathy degeneratif , displasia siku dan pinggul, serta pembengkakan perut. Kami merekomendasikan untuk mengecek Kesehatan secara berkala serta  mempelajari bagaimana penanganan apabila anjing ini mengalami pembengkakan perut.</item>
+        <item>Ras anjing Golden Retriever memiliki resiko terhadap displasia siku dan pinggul, kondisi mata seperti katarak juvenil, uveitis pigmen, dan atrofi retina progresif; dan penyakit jantung tertentu, termasuk stenosis aorta subvalvular. Kami merekomendasikan untuk diperiksa setiap minggu untuk tanda-tanda infeksi, dan gigi harus sering disikat.</item>
+        <item>Ras anjing Maltese memiliki resiko terhadap luxating patella dan kelainan jantung seperti PDA (patent ductus arteriosus). Kami merekomendasikan untuk melakukan pemeriksaan Patella dan Cardiac.</item>
+        <item>Ras anjing Pomeranian memiliki resiko patela lux (tempurung lutut yang terlepas dari tempatnya), hipotiroidisme, trakea yang kolaps, gagal jantung kongestif, kejang, dan alopecia X (penyakit kulit hitam). Kami merekomendasikan untuk pengecekan kesehatan patella, cardio, dan ophtalmologi (mata).</item>
+        <item>Ras anjing Pug terkadang mengalami masalah pernapasan dan tidak bisa melakukannya dengan baik di cuaca cerah, panas, atau lembab. Selama anjing masih diberikan asupan makanan yang cukup tidak perlu melakukan pengecekan secara berkala.</item>
+        <item>Ras anjing Shih Tzu memiliki resiko terhadap displasia pinggul, luksasi patela (tempurung lutut yang tergelincir), kelainan mata termasuk katarak, atrofi retina progresif, ablasi retina, dan kekeringan dan peradangan kornea akibat kelebihan berat badan. Sebagian besar anjing Shih Tzu umumnya sehat dan tidak memerlukan pengecekan berkala</item>
+        <item>Ras anjing Siberian Husky memiliki resiko tinggi terhadap  katarak. Kami merekomendasikan untuk melakukan pemeriksaan Ophthalmologist.</item>
     </string-array>
 
 </resources>

@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/sapphire"
-    tools:context=".MainActivity">
+    tools:context=".main.MainActivity">
 
     <RelativeLayout
         android:id="@+id/relative_layout_1"
@@ -15,7 +15,8 @@
             android:id="@+id/iv_banner"
             android:layout_width="match_parent"
             android:layout_height="228dp"
-            android:src="@drawable/background"/>
+            android:src="@drawable/background"
+            android:contentDescription="@string/desc_banner" />
     </RelativeLayout>
 
     <FrameLayout
@@ -34,27 +35,27 @@
             <Button
                 android:id="@+id/btn_breed"
                 android:text="@string/dog_breed"
-                android:drawableRight="@drawable/ic_bullet_list"
+                android:drawableEnd="@drawable/ic_bullet_list"
                 style="@style/style_menu"/>
 
             <Button
                 android:id="@+id/btn_camera"
                 android:text="@string/camera"
-                android:drawableRight="@drawable/ic_camera"
+                android:drawableEnd="@drawable/ic_camera"
                 app:layout_constraintTop_toBottomOf="@id/btn_breed"
                 style="@style/style_menu"/>
 
             <Button
                 android:id="@+id/btn_bookmark"
                 android:text="@string/bookmark"
-                android:drawableRight="@drawable/ic_bookmark"
+                android:drawableEnd="@drawable/ic_bookmark"
                 app:layout_constraintTop_toBottomOf="@id/btn_camera"
                 style="@style/style_menu"/>
 
             <Button
                 android:id="@+id/btn_exit"
                 android:text="@string/exit"
-                android:drawableRight="@drawable/ic_logout"
+                android:drawableEnd="@drawable/ic_logout"
                 app:layout_constraintTop_toBottomOf="@id/btn_bookmark"
                 style="@style/style_menu"/>
 

@@ -1,51 +1,85 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/sapphire"
-    tools:context=".CameraActivity">
+    tools:context=".menu2.CameraActivity">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/constraint_lay"
+    <TextView
+        android:id="@+id/tv_jdl_cmr"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center">
-        <ImageView
-            android:id="@+id/iv_upload_foto"
-            android:layout_width="360dp"
-            android:layout_height="480dp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            android:src="@drawable/dogdogdog"
-            />
+        android:layout_marginTop="10dp"
+        android:textColor="@color/dandelion"
+        android:textStyle="bold"
+        android:textSize="24sp"
+        android:text="@string/please"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
 
-        <Button
-            android:id="@+id/btn_camera"
-            android:text="@string/camera"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toStartOf="@id/btn_galeri"
-            app:layout_constraintTop_toBottomOf="@id/iv_upload_foto"
-            style="@style/style_btn_camera_activity"/>
+    <ImageView
+        android:id="@+id/iv_alert_dia"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:src="@drawable/ic_help"
+        app:layout_constraintTop_toBottomOf="@id/tv_jdl_cmr"
+        app:layout_constraintBottom_toTopOf="@id/fl_isi_cl"
+        app:layout_constraintEnd_toEndOf="@id/fl_isi_cl"/>
 
-        <Button
-            android:id="@+id/btn_galeri"
-            android:text="@string/gallery"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@id/btn_camera"
-            app:layout_constraintTop_toBottomOf="@id/iv_upload_foto"
-            style="@style/style_btn_camera_activity"/>
 
-        <Button
-            android:id="@+id/btn_scan"
-            android:text="@string/scan"
-            android:layout_width="0dp"
+    <FrameLayout
+        android:id="@+id/fl_isi_cl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraint_lay"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/btn_galeri"
-            style="@style/style_btn_camera_activity"/>
-    </androidx.constraintlayout.widget.ConstraintLayout>
-</FrameLayout>
+            android:layout_gravity="center">
+            <ImageView
+                android:id="@+id/iv_upload_foto"
+                android:layout_width="350dp"
+                android:layout_height="350dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:src="@drawable/ic_image_64"
+                />
+
+            <Button
+                android:id="@+id/btn_camera"
+                android:text="@string/camera"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/btn_galeri"
+                app:layout_constraintTop_toBottomOf="@id/iv_upload_foto"
+                style="@style/style_btn_camera_activity"/>
+
+            <Button
+                android:id="@+id/btn_galeri"
+                android:text="@string/gallery"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/btn_camera"
+                app:layout_constraintTop_toBottomOf="@id/iv_upload_foto"
+                style="@style/style_btn_camera_activity"/>
+
+            <Button
+                android:id="@+id/btn_scan"
+                android:text="@string/scan"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:drawableEnd="@drawable/ic_search"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/btn_galeri"
+                style="@style/style_btn_camera_activity"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </FrameLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -2,9 +2,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.akbar.dbdpv1">
 
-    <uses-feature android:name="android.hardware.camera" />
-
-    <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
@@ -31,22 +28,25 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.DBDPV1">
         <activity
-            android:name=".DetailBreedActivity"
+            android:name=".ResultScanActivity"
+            android:exported="false" />
+        <activity
+            android:name=".menu1.DetailBreedActivity"
             android:exported="false" />
         <activity
             android:name=".BookmarkActivity"
             android:exported="false" />
         <activity
-            android:name=".BreedActivity"
+            android:name=".menu1.BreedActivity"
             android:exported="false" />
         <activity
-            android:name=".CameraXActivity"
+            android:name=".menu2.CameraXActivity"
             android:exported="false" />
         <activity
-            android:name=".CameraActivity"
+            android:name=".menu2.CameraActivity"
             android:exported="false" />
         <activity
-            android:name=".SplashActivity"
+            android:name=".main.SplashActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -55,8 +55,18 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".MainActivity"
+            android:name=".main.MainActivity"
             android:exported="true" />
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.akbar.dbdpv1.menu2"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
     </application>
 
 </manifest>

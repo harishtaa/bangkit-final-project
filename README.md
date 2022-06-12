@@ -44,11 +44,11 @@ https://drive.google.com/file/d/11LvSzaB2yWfIFTM9it8zXaMbNGnM3Srd/view?usp=shari
 
 ## Mobile Development Documentation
 - ## 1. Feature
-   - Splash Screen
-   - Pick image from galery
-   - Capture image from camera
-   - Send image to cloud
-   - Get the details of the dog
+   - Splash Screen, before entering the application there is a splashscreen shows app logo
+   - Pick image from galery, user can pick image from galery
+   - Capture image from camera, user can capture image from camera realtime
+   - Send image to cloud, user can send image to cloud to predict their dog image
+   - Get the details of the dog, user can see the details of their dog, include Activity Level, Barking Level, Common Healt Problem, etc.
 - ## 2. Build With
    - Android Studio
    - Kotlin

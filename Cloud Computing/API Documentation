@@ -1,0 +1,80 @@
+{
+	"info": {
+		"_postman_id": "80187245-034d-47f2-a733-f1b8e6958c90",
+		"name": "Piaraan.id",
+		"description": "# Introduction\n\nconnects with machine learning model and MySQL database\n\n# Authentication\n\nno authentication\n\n# Error Codes\n\n200 (correct request form)\n\n400 (bad request)\n\n500 (server error)\n\n# Rate limit\n\nno",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "19980817"
+	},
+	"item": [
+		{
+			"name": "Get All Dog Data",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://piaraan-id-lt7iilztra-et.a.run.app",
+					"protocol": "https",
+					"host": [
+						"piaraan-id-lt7iilztra-et",
+						"a",
+						"run",
+						"app"
+					]
+				},
+				"description": "returns all stored dog breed data, with a tuple data type"
+			},
+			"response": []
+		},
+		{
+			"name": "Get Dog by Breed Name",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://piaraan-id-lt7iilztra-et.a.run.app/:\"dogbreed\"",
+					"protocol": "https",
+					"host": [
+						"piaraan-id-lt7iilztra-et",
+						"a",
+						"run",
+						"app"
+					],
+					"path": [
+						":\"dogbreed\""
+					],
+					"variable": [
+						{
+							"key": "\"dogbreed\"",
+							"value": null
+						}
+					]
+				},
+				"description": "return a specific dog breed by passing the breed name on endpoint, with a Json data type"
+			},
+			"response": []
+		},
+		{
+			"name": "Predict",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "https://piaraan-id-lt7iilztra-et.a.run.app/predict",
+					"protocol": "https",
+					"host": [
+						"piaraan-id-lt7iilztra-et",
+						"a",
+						"run",
+						"app"
+					],
+					"path": [
+						"predict"
+					]
+				},
+				"description": "needs a key named \"data64\" with an image encoded to base64 as it's value. Returns the prediction result as a Json."
+			},
+			"response": []
+		}
+	]
+}

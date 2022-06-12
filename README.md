@@ -60,3 +60,16 @@ https://drive.google.com/file/d/11LvSzaB2yWfIFTM9it8zXaMbNGnM3Srd/view?usp=shari
    - Room-runtime
    - Lifecycle-viewModel
    - lifecycle-liveData
+   
+ ## Cloud Computing Documentation
+ -## 1. Create an API Using Flask
+  - Using h5 file for ML model
+  - Decode base64 data
+  - Resize image
+  
+ -## 2. Deployment
+  - Use Gunicorn as the WSGI
+  - Containerize using docker
+  - Use cloud sql for MySQL Hosting
+  - Connect to MySQL
+  - Deploy to cloud run

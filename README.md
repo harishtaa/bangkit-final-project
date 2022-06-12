@@ -41,3 +41,15 @@ https://colab.research.google.com/drive/1457QmwqTnaYD9ganvVHoKJ0nl7NidpLs
 - ## 4. Save the Model to Google Drive
   - Then, save the model (*.h5 format) to Google Drive (saved only the best model to Google Drive):<br>
 https://drive.google.com/file/d/11LvSzaB2yWfIFTM9it8zXaMbNGnM3Srd/view?usp=sharing
+
+## Mobile Development Documentation
+- ## 1. Feature
+   - Splash Screen
+   - Pick image from galery
+   - Capture image from camera
+   - Send image to cloud
+   - Get the details of the dog
+- ## 2. Build With
+   - Android Studio
+   - Kotlin
+   - Retrofit

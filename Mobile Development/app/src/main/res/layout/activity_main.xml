@@ -21,14 +21,14 @@
 
     <FrameLayout
         android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_height="wrap_content"
         android:padding="40dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toBottomOf="@id/relative_layout_1">
 
         <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_isi_menu"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
@@ -36,6 +36,8 @@
                 android:id="@+id/btn_breed"
                 android:text="@string/dog_breed"
                 android:drawableEnd="@drawable/ic_bullet_list"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toTopOf="@id/btn_camera"
                 style="@style/style_menu"/>
 
             <Button
@@ -43,6 +45,7 @@
                 android:text="@string/camera"
                 android:drawableEnd="@drawable/ic_camera"
                 app:layout_constraintTop_toBottomOf="@id/btn_breed"
+                app:layout_constraintBottom_toTopOf="@id/btn_bookmark"
                 style="@style/style_menu"/>
 
             <Button
@@ -50,6 +53,7 @@
                 android:text="@string/bookmark"
                 android:drawableEnd="@drawable/ic_bookmark"
                 app:layout_constraintTop_toBottomOf="@id/btn_camera"
+                app:layout_constraintBottom_toTopOf="@id/btn_exit"
                 style="@style/style_menu"/>
 
             <Button
@@ -57,6 +61,7 @@
                 android:text="@string/exit"
                 android:drawableEnd="@drawable/ic_logout"
                 app:layout_constraintTop_toBottomOf="@id/btn_bookmark"
+                app:layout_constraintBottom_toBottomOf="parent"
                 style="@style/style_menu"/>
 
         </androidx.constraintlayout.widget.ConstraintLayout>

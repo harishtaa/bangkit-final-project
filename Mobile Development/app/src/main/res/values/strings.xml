@@ -22,6 +22,11 @@
     <string name="desc_banner">banner logo utama</string>
     <string name="yd">Your Dog</string>
     <string name="breed">Breed</string>
+    <string name="common_health_problems">Common Health Problems</string>
+    <string name="scan_img">gambar yang akan discan</string>
+    <string name="button_help">button help</string>
+    <string name="gambar_detail_anjing">gambar detail anjing</string>
+    <string name="logo_bookmark">logo bookmark</string>
 
     <string-array name="dogID">
         <item>1</item>

@@ -28,7 +28,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.DBDPV1">
         <activity
-            android:name=".ResultScanActivity"
+            android:name=".testget.TestGetActivity"
+            android:exported="false" />
+        <activity
+            android:name=".result.ResultScanActivity"
             android:exported="false" />
         <activity
             android:name=".menu1.DetailBreedActivity"

@@ -19,7 +19,8 @@
         <ImageView
             android:id="@+id/iv_dog_pic"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"/>
+            android:layout_height="match_parent"
+            android:contentDescription="@string/gambar_detail_anjing" />
     </androidx.cardview.widget.CardView>
 
     <TextView
@@ -118,7 +119,7 @@
         android:textColor="@color/dandelion"
         android:textStyle="bold"
         android:textSize="24sp"
-        android:text="Common Health Problems" />
+        android:text="@string/common_health_problems" />
     
     <ToggleButton
         android:id="@+id/togbut_favorite"
@@ -140,7 +141,7 @@
         app:layout_constraintEnd_toEndOf="@id/togbut_favorite"
         app:layout_constraintTop_toTopOf="@id/togbut_favorite"
         app:layout_constraintBottom_toBottomOf="@id/togbut_favorite"
-        />
+        android:contentDescription="@string/logo_bookmark" />
 
     <androidx.cardview.widget.CardView
         android:id="@+id/view_background_chp"

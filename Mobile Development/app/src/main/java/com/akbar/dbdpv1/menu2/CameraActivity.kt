@@ -1,42 +1,35 @@
 package com.akbar.dbdpv1.menu2
 
-import android.content.DialogInterface
 import android.content.Intent
 import android.graphics.Bitmap
 import android.graphics.BitmapFactory
 import android.net.Uri
 import android.os.Bundle
 import android.provider.MediaStore
+import android.util.Base64
+import android.util.Log
+import android.view.View
 import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.FileProvider
-import com.akbar.dbdpv1.ResultScanActivity
+import com.akbar.dbdpv1.result.ResultScanActivity
 import com.akbar.dbdpv1.apinya.ApiConfig
 import com.akbar.dbdpv1.databinding.ActivityCameraBinding
 import com.akbar.dbdpv1.uriToFile
-import okhttp3.MediaType.Companion.toMediaTypeOrNull
-import okhttp3.MultipartBody
-import okhttp3.RequestBody.Companion.asRequestBody
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 import java.io.ByteArrayOutputStream
 import java.io.File
 import java.io.FileOutputStream
-import java.util.*
-
 
 class CameraActivity : AppCompatActivity() {
 
     private lateinit var binding : ActivityCameraBinding
     private var getFile : File? = null
     private lateinit var currentPhotoPath: String
-
-    companion object {
-        const val CAMERA_X_RESULT = 200
-    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -51,7 +44,7 @@ class CameraActivity : AppCompatActivity() {
                     "2. Penerangan yang cukup \n" +
                     "3. Objek tidak terlalu jauh \n" +
                     "4. Jika foto blur/tidak jelas, mohon diulang")
-            .setPositiveButton("Oke", DialogInterface.OnClickListener { dia, _ -> dia.cancel() })
+            .setPositiveButton("Oke") { dia, _ -> dia.cancel() }
 
         binding.ivAlertDia.setOnClickListener {
             val clicked = dialogAle.create()
@@ -59,15 +52,15 @@ class CameraActivity : AppCompatActivity() {
         }
 
         binding.btnGaleri.setOnClickListener { startGallery() }
-        binding.btnCamera.setOnClickListener { startTakePhoto() } //startCameraX()
+        binding.btnCamera.setOnClickListener { startTakePhoto() }
         binding.btnScan.setOnClickListener { startUploadFoto() }
     }
-
 
     private val launcherIntentGallery = registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result ->
         if (result.resultCode == RESULT_OK) {
             val selectedImg: Uri = result.data?.data as Uri
             val myFile = uriToFile(selectedImg, this)
+            getFile = myFile
             binding.ivUploadFoto.setImageURI(selectedImg)
         }
     }
@@ -120,75 +113,49 @@ class CameraActivity : AppCompatActivity() {
         return file
     }
 
-    /*
     private fun reduceImageToBase64(file: File): String {
-        val bitmap = BitmapFactory.decodeFile(file.path)
-        val bmpStream = ByteArrayOutputStream()
-        bitmap.compress(Bitmap.CompressFormat.JPEG, 50, bmpStream)
-        val image = bmpStream.toByteArray()
-
-        val imageData: ByteArray = Base64.encodeBase64(bitmap.getBytes())
-
-        return Base64.getEncoder().encodeToString(image, Base64.DEFAULT)
+        val fileCompress = reduceFileImage(file)
+        return Base64.encodeToString(fileCompress.readBytes(), Base64.DEFAULT)
     }
-     */
 
     private fun startUploadFoto(){
+        showLoading(true)
         if(getFile != null){
-            val token = "//belom ada tokennya atau gausah pake token"
-            val file = reduceFileImage(getFile as File)
-            val requestImageFile = file.asRequestBody("image/jpeg".toMediaTypeOrNull())
-            val imageMultipart: MultipartBody.Part = MultipartBody.Part.createFormData(
-                "photo",
-                file.name,
-                requestImageFile
-            )
 
-            ApiConfig.getApiService().uploadImage(imageMultipart).enqueue(object : Callback<UploadResponse>{
+            val covertImageToBase64 = reduceImageToBase64(getFile as File)
+            val fileRequest = UploadRequest(data64 = covertImageToBase64)
+
+            ApiConfig.getApiService().uploadImage(fileRequest).enqueue(object : Callback<UploadResponse>{
                 override fun onResponse(call: Call<UploadResponse>, response: Response<UploadResponse>) {
                     if (response.isSuccessful) {
                         val responseBody = response.body()
-                        if (responseBody != null && !responseBody.error) {
-                            Toast.makeText(this@CameraActivity, responseBody.message, Toast.LENGTH_SHORT).show()
-                        }
-                        //diisi akan dipindahkan ke activity baru atau hanya memunculkan data
-                        Intent(this@CameraActivity, ResultScanActivity::class.java).also { startActivity(it) }
-                        //showLoading(false)
+                        val intent = Intent(this@CameraActivity, ResultScanActivity::class.java)
+                        showLoading(false)
+                        startActivity(intent.putExtra("EXTRA_DATA", responseBody?.dogdata))
                         finish()
                     } else {
-                        //showLoading(false)
+                        showLoading(false)
                         Toast.makeText(this@CameraActivity, response.message(), Toast.LENGTH_SHORT).show()
                     }
                 }
 
                 override fun onFailure(call: Call<UploadResponse>, t: Throwable) {
-                    //showLoading(false)
+                    showLoading(false)
                     Toast.makeText(this@CameraActivity, "Retrofit instance failed", Toast.LENGTH_SHORT).show()
+                    Log.e("apa errornya: ", t.message.toString())
                 }
             })
         }else{
-            //showLoading(false)
+            showLoading(false)
             Toast.makeText(this, "Please add a picture first.", Toast.LENGTH_SHORT).show()
         }
     }
 
-    /*
-    private fun startCameraX() {
-        val intent = Intent(this, CameraXActivity::class.java)
-        launcherIntentCameraX.launch(intent)
-    }
-
-    private val launcherIntentCameraX = registerForActivityResult(ActivityResultContracts.StartActivityForResult()) {
-        if (it.resultCode == CAMERA_X_RESULT) {
-            val myFile = it.data?.getSerializableExtra("picture") as File
-            val isBackCamera = it.data?.getBooleanExtra("isBackCamera", true) as Boolean
-
-            val result = rotateBitmap(
-                BitmapFactory.decodeFile(myFile.path),
-                isBackCamera
-            )
-            binding.ivUploadFoto.setImageBitmap(result)
+    private fun showLoading(state: Boolean){
+        if (state){
+            binding.progressBar.visibility = View.VISIBLE
+        }else{
+            binding.progressBar.visibility = View.GONE
         }
     }
-    */
 }

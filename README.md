@@ -49,7 +49,14 @@ https://drive.google.com/file/d/11LvSzaB2yWfIFTM9it8zXaMbNGnM3Srd/view?usp=shari
    - Capture image from camera, user can capture image from camera realtime
    - Send image to cloud, user can send image to cloud to predict their dog image
    - Get the details of the dog, user can see the details of their dog, include Activity Level, Barking Level, Common Healt Problem, etc.
+   - User can save the dog data in bookmark
+
 - ## 2. Build With
+   - Figma (for design)
    - Android Studio
    - Kotlin
-   - Retrofit
+   - Retrofit2
+   - Coroutines
+   - Room-runtime
+   - Lifecycle-viewModel
+   - lifecycle-liveData

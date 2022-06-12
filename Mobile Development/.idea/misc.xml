@@ -3,13 +3,21 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Android_Kotlin/DBDPV1/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.1235" />
         <entry key="..\:/Android_Kotlin/DBDPV1/app/src/main/res/drawable/bookmark_selection.xml" value="0.1545" />
         <entry key="..\:/Android_Kotlin/DBDPV1/app/src/main/res/drawable/ellipse_red.xml" value="0.1545" />
         <entry key="..\:/Android_Kotlin/DBDPV1/app/src/main/res/drawable/ellipse_white.xml" value="0.1545" />
         <entry key="..\:/Android_Kotlin/DBDPV1/app/src/main/res/drawable/ic_bookmark.xml" value="0.1545" />
+        <entry key="..\:/Android_Kotlin/DBDPV1/app/src/main/res/drawable/ic_bullet_list.xml" value="0.1235" />
+        <entry key="..\:/Android_Kotlin/DBDPV1/app/src/main/res/drawable/ic_camera.xml" value="0.1235" />
         <entry key="..\:/Android_Kotlin/DBDPV1/app/src/main/res/drawable/ic_circle.xml" value="0.152" />
+        <entry key="..\:/Android_Kotlin/DBDPV1/app/src/main/res/drawable/ic_folder.xml" value="0.1235" />
         <entry key="..\:/Android_Kotlin/DBDPV1/app/src/main/res/drawable/ic_help.xml" value="0.1485" />
         <entry key="..\:/Android_Kotlin/DBDPV1/app/src/main/res/drawable/ic_home.xml" value="0.152" />
+        <entry key="..\:/Android_Kotlin/DBDPV1/app/src/main/res/drawable/ic_image_64.xml" value="0.1235" />
+        <entry key="..\:/Android_Kotlin/DBDPV1/app/src/main/res/drawable/ic_logout.xml" value="0.1235" />
+        <entry key="..\:/Android_Kotlin/DBDPV1/app/src/main/res/drawable/ic_search.xml" value="0.1235" />
+        <entry key="..\:/Android_Kotlin/DBDPV1/app/src/main/res/drawable/ic_switch_camera.xml" value="0.1235" />
         <entry key="..\:/Android_Kotlin/DBDPV1/app/src/main/res/drawable/rectangle_bookmark.xml" value="0.1545" />
         <entry key="..\:/Android_Kotlin/DBDPV1/app/src/main/res/drawable/rectangle_chp.xml" value="0.1545" />
         <entry key="..\:/Android_Kotlin/DBDPV1/app/src/main/res/drawable/rectangle_detail.xml" value="0.1605" />
@@ -21,7 +29,8 @@
         <entry key="..\:/Android_Kotlin/DBDPV1/app/src/main/res/layout/activity_main.xml" value="0.264" />
         <entry key="..\:/Android_Kotlin/DBDPV1/app/src/main/res/layout/activity_result_scan.xml" value="0.264" />
         <entry key="..\:/Android_Kotlin/DBDPV1/app/src/main/res/layout/activity_splash.xml" value="0.259375" />
-        <entry key="..\:/Android_Kotlin/DBDPV1/app/src/main/res/layout/item_bookmark.xml" value="0.264" />
+        <entry key="..\:/Android_Kotlin/DBDPV1/app/src/main/res/layout/activity_test_get.xml" value="0.20677083333333332" />
+        <entry key="..\:/Android_Kotlin/DBDPV1/app/src/main/res/layout/item_bookmark.xml" value="0.12" />
         <entry key="..\:/Android_Kotlin/DBDPV1/app/src/main/res/layout/item_grid.xml" value="0.259375" />
         <entry key="..\:/Android_Kotlin/DBDPV1/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.152" />
       </map>

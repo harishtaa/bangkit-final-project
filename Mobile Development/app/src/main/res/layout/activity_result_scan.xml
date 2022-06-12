@@ -1,182 +1,178 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/sapphire"
-    android:padding="15dp"
-    tools:context=".ResultScanActivity">
+    tools:context=".result.ResultScanActivity">
 
-    <TextView
-        android:id="@+id/tv_jdl_result"
-        android:layout_width="wrap_content"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:textColor="@color/dandelion"
-        android:textStyle="bold"
-        android:textSize="24sp"
-        android:text="@string/yd"/>
+        android:background="@color/sapphire"
+        android:layout_marginBottom="10dp"
+        android:padding="15dp">
 
-    <de.hdodenhof.circleimageview.CircleImageView
-        android:id="@+id/civ_foto_anjing"
-        android:layout_width="200dp"
-        android:layout_height="200dp"
-        android:src="@drawable/pug"
-        android:layout_marginTop="20dp"
-        app:layout_constraintTop_toBottomOf="@id/tv_jdl_result"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"/>
+        <TextView
+            android:id="@+id/tv_jdl_result"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:textColor="@color/dandelion"
+            android:textStyle="bold"
+            android:textSize="24sp"
+            android:text="@string/yd"/>
 
-    <ToggleButton
-        android:id="@+id/togbut_favorite"
-        android:layout_width="48dp"
-        android:layout_height="48dp"
-        android:textOn=""
-        android:textOff=""
-        android:layout_marginTop="10dp"
-        app:layout_constraintEnd_toEndOf="@id/v_bg_dtl"
-        app:layout_constraintBottom_toBottomOf="@id/civ_foto_anjing"
-        android:background="@drawable/bookmark_selection"/>
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/civ_foto_anjing"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:src="@drawable/ic_image_64"
+            android:layout_marginTop="20dp"
+            app:layout_constraintTop_toBottomOf="@id/tv_jdl_result"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
 
-    <ImageView
-        android:layout_width="32dp"
-        android:layout_height="32dp"
-        android:src="@drawable/ic_bookmark"
-        android:translationZ="100dp"
-        app:layout_constraintStart_toStartOf="@id/togbut_favorite"
-        app:layout_constraintEnd_toEndOf="@id/togbut_favorite"
-        app:layout_constraintTop_toTopOf="@id/togbut_favorite"
-        app:layout_constraintBottom_toBottomOf="@id/togbut_favorite"
-        />
+        <androidx.cardview.widget.CardView
+            android:id="@+id/v_bg_dtl"
+            android:layout_width="0dp"
+            android:layout_height="175dp"
+            android:layout_marginTop="15dp"
+            android:backgroundTint="@color/dandelion"
+            app:cardCornerRadius="12dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/civ_foto_anjing"/>
 
-    <androidx.cardview.widget.CardView
-        android:id="@+id/v_bg_dtl"
-        android:layout_width="0dp"
-        android:layout_height="175dp"
-        android:layout_marginTop="15dp"
-        android:backgroundTint="@color/dandelion"
-        app:cardCornerRadius="12dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/civ_foto_anjing"/>
+        <TextView
+            style="@style/style_detail_activity"
+            android:id="@+id/tv_breed"
+            android:text="@string/breed"
+            android:layout_marginTop="8dp"
+            app:layout_constraintStart_toStartOf="@id/v_bg_dtl"
+            app:layout_constraintTop_toTopOf="@id/v_bg_dtl"/>
 
-    <TextView
-        style="@style/style_detail_activity"
-        android:id="@+id/tv_breed"
-        android:text="@string/breed"
-        android:layout_marginTop="8dp"
-        app:layout_constraintStart_toStartOf="@id/v_bg_dtl"
-        app:layout_constraintTop_toTopOf="@id/v_bg_dtl"/>
+        <TextView
+            style="@style/style_detail_activity"
+            android:id="@+id/tv_al"
+            android:text="@string/activity_lv"
+            app:layout_constraintStart_toStartOf="@id/v_bg_dtl"
+            app:layout_constraintTop_toBottomOf="@id/tv_breed"
+            app:layout_constraintBottom_toTopOf="@id/tv_bl"/>
 
-    <TextView
-        style="@style/style_detail_activity"
-        android:id="@+id/tv_al"
-        android:text="@string/activity_lv"
-        app:layout_constraintStart_toStartOf="@id/v_bg_dtl"
-        app:layout_constraintTop_toBottomOf="@id/tv_breed"
-        app:layout_constraintBottom_toTopOf="@id/tv_bl"/>
+        <TextView
+            style="@style/style_detail_activity"
+            android:id="@+id/tv_bl"
+            android:text="@string/barking_lv"
+            app:layout_constraintStart_toStartOf="@id/v_bg_dtl"
+            app:layout_constraintTop_toBottomOf="@id/tv_al"
+            app:layout_constraintBottom_toTopOf="@id/tv_tn"/>
 
-    <TextView
-        style="@style/style_detail_activity"
-        android:id="@+id/tv_bl"
-        android:text="@string/barking_lv"
-        app:layout_constraintStart_toStartOf="@id/v_bg_dtl"
-        app:layout_constraintTop_toBottomOf="@id/tv_al"
-        app:layout_constraintBottom_toTopOf="@id/tv_tn"/>
+        <TextView
+            style="@style/style_detail_activity"
+            android:id="@+id/tv_tn"
+            android:text="@string/trainability"
+            app:layout_constraintStart_toStartOf="@id/v_bg_dtl"
+            app:layout_constraintTop_toBottomOf="@id/tv_bl"
+            app:layout_constraintBottom_toTopOf="@id/tv_pn"/>
 
-    <TextView
-        style="@style/style_detail_activity"
-        android:id="@+id/tv_tn"
-        android:text="@string/trainability"
-        app:layout_constraintStart_toStartOf="@id/v_bg_dtl"
-        app:layout_constraintTop_toBottomOf="@id/tv_bl"
-        app:layout_constraintBottom_toTopOf="@id/tv_pn"/>
+        <TextView
+            style="@style/style_detail_activity"
+            android:id="@+id/tv_pn"
+            android:text="@string/protective_nature"
+            app:layout_constraintStart_toStartOf="@id/v_bg_dtl"
+            app:layout_constraintTop_toBottomOf="@id/tv_tn"
+            app:layout_constraintBottom_toBottomOf="@id/v_bg_dtl"
+            />
 
-    <TextView
-        style="@style/style_detail_activity"
-        android:id="@+id/tv_pn"
-        android:text="@string/protective_nature"
-        app:layout_constraintStart_toStartOf="@id/v_bg_dtl"
-        app:layout_constraintTop_toBottomOf="@id/tv_tn"
-        app:layout_constraintBottom_toBottomOf="@id/v_bg_dtl"
-        />
+        <TextView
+            style="@style/style_result_detail_activity"
+            android:id="@+id/tv_result_breed"
+            android:text="@string/standard"
+            app:layout_constraintEnd_toEndOf="@id/v_bg_dtl"
+            app:layout_constraintTop_toTopOf="@id/tv_breed" />
 
-    <TextView
-        style="@style/style_result_detail_activity"
-        android:id="@+id/tv_result_breed"
-        android:text="@string/standard"
-        app:layout_constraintEnd_toEndOf="@id/v_bg_dtl"
-        app:layout_constraintTop_toTopOf="@id/tv_breed" />
+        <TextView
+            style="@style/style_result_detail_activity"
+            android:id="@+id/tv_result_al"
+            android:text="@string/standard"
+            app:layout_constraintEnd_toEndOf="@id/v_bg_dtl"
+            app:layout_constraintTop_toTopOf="@id/tv_al" />
 
-    <TextView
-        style="@style/style_result_detail_activity"
-        android:id="@+id/tv_result_al"
-        android:text="@string/standard"
-        app:layout_constraintEnd_toEndOf="@id/v_bg_dtl"
-        app:layout_constraintTop_toTopOf="@id/tv_al" />
+        <TextView
+            style="@style/style_result_detail_activity"
+            android:id="@+id/tv_result_bl"
+            android:text="@string/standard"
+            app:layout_constraintEnd_toEndOf="@id/v_bg_dtl"
+            app:layout_constraintTop_toTopOf="@id/tv_bl" />
 
-    <TextView
-        style="@style/style_result_detail_activity"
-        android:id="@+id/tv_result_bl"
-        android:text="@string/standard"
-        app:layout_constraintEnd_toEndOf="@id/v_bg_dtl"
-        app:layout_constraintTop_toTopOf="@id/tv_bl" />
+        <TextView
+            style="@style/style_result_detail_activity"
+            android:id="@+id/tv_result_tn"
+            android:text="@string/standard"
+            app:layout_constraintEnd_toEndOf="@id/v_bg_dtl"
+            app:layout_constraintTop_toTopOf="@id/tv_tn" />
 
-    <TextView
-        style="@style/style_result_detail_activity"
-        android:id="@+id/tv_result_tn"
-        android:text="@string/standard"
-        app:layout_constraintEnd_toEndOf="@id/v_bg_dtl"
-        app:layout_constraintTop_toTopOf="@id/tv_tn" />
+        <TextView
+            style="@style/style_result_detail_activity"
+            android:id="@+id/tv_result_pn"
+            android:text="@string/standard"
+            app:layout_constraintEnd_toEndOf="@id/v_bg_dtl"
+            app:layout_constraintTop_toTopOf="@id/tv_pn"/>
 
-    <TextView
-        style="@style/style_result_detail_activity"
-        android:id="@+id/tv_result_pn"
-        android:text="@string/standard"
-        app:layout_constraintEnd_toEndOf="@id/v_bg_dtl"
-        app:layout_constraintTop_toTopOf="@id/tv_pn"/>
+        <TextView
+            android:id="@+id/tv_chp_judul"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/v_bg_dtl"
+            android:textColor="@color/dandelion"
+            android:textStyle="bold"
+            android:textSize="24sp"
+            android:text="@string/common_health_problems" />
 
-    <TextView
-        android:id="@+id/tv_chp_judul"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/v_bg_dtl"
-        android:textColor="@color/dandelion"
-        android:textStyle="bold"
-        android:textSize="24sp"
-        android:text="Common Health Problems" />
+        <androidx.cardview.widget.CardView
+            android:id="@+id/view_background_chp"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="10dp"
+            android:backgroundTint="@color/dandelion"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="@id/tv_isi_chp"
+            app:layout_constraintTop_toBottomOf="@id/tv_chp_judul" />
 
-    <androidx.cardview.widget.CardView
-        android:id="@+id/view_background_chp"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginTop="10dp"
-        android:backgroundTint="@color/dandelion"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintBottom_toBottomOf="@id/tv_isi_chp"
-        app:layout_constraintTop_toBottomOf="@id/tv_chp_judul"
-        app:cardCornerRadius="12dp"/>
+        <TextView
+            android:id="@+id/tv_isi_chp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:translationZ="100dp"
+            app:layout_constraintStart_toStartOf="@id/view_background_chp"
+            app:layout_constraintEnd_toEndOf="@id/view_background_chp"
+            app:layout_constraintTop_toTopOf="@id/view_background_chp"
+            app:layout_constraintBottom_toBottomOf="@id/view_background_chp"/>
 
-    <TextView
-        android:id="@+id/tv_isi_chp"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_margin="10dp"
-        android:textColor="@color/black"
-        android:textStyle="bold"
-        android:textSize="18sp"
-        android:translationZ="100dp"
-        app:layout_constraintStart_toStartOf="@id/view_background_chp"
-        app:layout_constraintEnd_toEndOf="@id/view_background_chp"
-        app:layout_constraintTop_toTopOf="@id/view_background_chp"
-        app:layout_constraintBottom_toBottomOf="@id/view_background_chp"/>
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:translationZ="1000dp"
+            android:visibility="gone"
+            />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
